@@ -4,7 +4,17 @@
 #include "./../include/calculator.h"
 
 int main(int argc, char *argv[]){
-	if (argc == 4)
+	if (argc == 3) {
+		char* op = argv[1];
+		char* a = argv[2];
+		double r = 0;
+		if (strcmp(op, "sqr") == 0) {
+			r = _sqr(atof(a));
+			printf("%lf",r);
+		}
+		else {printf("Erreur de parametres");}
+	}
+	else if (argc == 4)
 	{
 	char* op = argv[1];
 	char* a = argv[2];
